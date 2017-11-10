@@ -1,0 +1,16 @@
+Create a new branch from master eg : security
+
+Push branch and spin up the pantheon environment with db from live .
+on new branch run commands :
+----------------------------------
+git pull git://github.com/pantheon-systems/drops-8.git master    // pull master branch updates from pantheon
+git push origin security    // push to new branch and run updates through terminal on that branch if any
+----------------------------------
+
+Test all to be fine on new enviornment and if all fine merge the new branch in maser and push to all sites. 
+Eg : 
+git checkout master
+git merge security master
+git push origin master
+
+Reference : http://helpdesk.getpantheon.com/customer/portal/articles/361248-core-updates

@@ -1,0 +1,5 @@
+services:
+  YOUR_CUSTOM_MODULE.route_subscriber:
+    class: Drupal\osseed_page_title\Routing\RouteSubscriber
+    tags:
+      - { name: event_subscriber }

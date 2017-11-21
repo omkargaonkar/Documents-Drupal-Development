@@ -1,0 +1,5 @@
+name: osseed page title
+description: Set the content page title.
+core: 8.x
+package: Custom
+type: module

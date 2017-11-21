@@ -1,0 +1,7 @@
+# select_list.form:
+#  path: '/osseed_page_title/myform'
+#  defaults:
+#    _title: 'osseed page title'
+#    _form: '\Drupal\osseed_page_title\Routing\RoutePageTitleForm'
+#  requirements:
+#    _permission: 'access content'

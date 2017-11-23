@@ -1,0 +1,22 @@
+Thanks it works,
+
+I just put logo.png in MYTHEME directory, and use the below code in the MYTHEME.theme
+
+search the preprocess hook otherwise add directly this code bottom of the page.
+
+I refered this code from https://www.drupal.org/forum/support/theme-development/2015-04-16/using-a-png-as-logo-in-drupal-8-theme this link
+
+/**
+* Implements hook_preprocess_HOOK() for block templates.
+*/
+	function MYTHEME_preprocess_block(&$variables) {
+	switch ($variables['base_plugin_id']) {
+	case 'system_branding_block':
+	$variables['site_logo'] = '';
+	if ($variables['content']['site_logo']['#access'] && $variables['content']['site_logo']['#uri']) {
+	$variables['site_logo'] = str_replace('.svg', '.png', $variables['content']['site_logo']['#uri']);
+	}
+	break;
+
+	}
+	}

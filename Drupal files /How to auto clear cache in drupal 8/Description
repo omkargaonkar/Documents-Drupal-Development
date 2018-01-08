@@ -1,0 +1,11 @@
+Set the configuration go to ->       site/development.services.yml 
+file same as your instance file
+
+paste the code settings.local.php file
+
+
+$settings['container_yamls'][] = DRUPAL_ROOT . '/sites/development.services.yml';
+
+
+
+

@@ -1,0 +1,36 @@
+Add this code in profile.profile file 
+
+
+
+// Get all seed custom modules.
+  $module_list = array (
+    'seed_locale' => 'seed_locale',
+  );
+  // Add profile settings group.
+  $form['module_settings'] = [
+    '#type' => 'fieldset',
+    '#title' => t('Module Settings'),
+  ];
+  // Default module selection.
+  $form['module_settings']['seed_module'] = [
+    '#title' => 'Enable Module',
+    '#type' => 'checkboxes',
+    '#options' => $module_list,
+    '#required' => TRUE,
+  ];
+
+
+
+
+  //Enable default module
+  $modules = array();
+  $modules_selected = $form_state->getValue('seed_module');
+  foreach ($modules_selected as $mname => $modules_selected) {
+    if ($modules_selected) {
+      $modules[]  = $mname;
+    }
+  }
+  if (!empty($modules)) {
+    \Drupal::service('module_installer')->install($modules , TRUE);
+  }
+}

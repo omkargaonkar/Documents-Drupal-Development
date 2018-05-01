@@ -1,0 +1,16 @@
+COMPOSER
+
+hacker@hacker:~$ wget https://getcomposer.org/composer.phar
+hacker@hacker:~$ mv composer.phar composer
+hacker@hacker:~$ chmod +x composer 
+hacker@hacker:~$ ./composer 
+hacker@hacker:~$ mv composer /usr/local/bin/
+
+
+refer:https://www.youtube.com/watch?v=YpGNQzY7bFQ
+
+DRUSH 
+
+
+hacker@hacker:~$ $ composer global require drush/drush:8.*
+

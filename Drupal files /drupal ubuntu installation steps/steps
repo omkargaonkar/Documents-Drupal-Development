@@ -2,8 +2,13 @@ sudo gedit /etc/hosts
 cd /etc/apache2/sites-available/
 sudo cp 000-default.conf local.newcareer.in.conf
 sudo gedit local.newcareer.in.conf
+  change Document root and server name and remove cmment for server name
+
 sudo a2ensite local.newcareer.in.conf
 sudo a2ensite local.newcareer.in 
 sudo service apache2 restart	
+
+cretae settings.php and files folder 
+
 sudo chmod 777 -R /var/www/local.newcareer.in/sites/default/files/
 sudo chmod 777 -R /var/www/local.newcareer.in/sites/default/settings.php/

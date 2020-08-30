@@ -1,0 +1,6 @@
+if you can't login anymore to access the recent log messages as described in the accepted answer.
+
+Open the file /sites/default/settings.php with an editor or ftp client and add this line:
+
+$config['system.logging']['error_level'] = 'verbose';
+After reloading the page you will see a full error message, instead of the generic “The website encountered an unexpected error. Please try again later.”
